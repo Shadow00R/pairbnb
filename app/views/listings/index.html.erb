@@ -1,6 +1,8 @@
 <h1>Listings#index</h1>
 <p>Find me in app/views/listings/index.html.erb</p>
 
+<div class='container'>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listings</h1>
@@ -21,7 +23,7 @@
 
   <tbody>
     <% @listings.each do |listing| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd','list_line_even') %>">
         <td><%= listing.name %></td>
         <td><%= listing.home_type %></td>
         <td><%= listing.room_type %></td>

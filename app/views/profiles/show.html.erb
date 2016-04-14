@@ -1,4 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <br>
+  <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+  <p>
+    <%= image_tag @profile.dis_pic_url(:thumb).to_s, class:"img-circle" %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @profile.name %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= @profile.location %>
+  </p>
+
+  <p>
+    <strong>Contact:</strong>
+    <%= @profile.contact %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @profile.user.email %>
+  </p>
+
+  <%= link_to 'Edit', edit_profile_path(@profile), class:"btn btn-warning" %> | <%= link_to 'Back', root_path, class:"btn btn-info" %>
+</div>
