@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :transactions, only: [:new, :create]
+
   resources :profiles, except: [:index, :destroy]
   resources :listings
 
